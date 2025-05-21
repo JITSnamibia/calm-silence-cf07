@@ -15,9 +15,13 @@
     "dash": true
   },
   "dependencies": {
+    "@types/pako": "^2.0.3",
+    "@types/simple-peer": "^9.11.8",
     "hono": "4.7.7",
+    "pako": "^2.1.0",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "simple-peer": "^9.11.1"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.0.8",

@@ -3,6 +3,9 @@
 // Runtime types generated with workerd@1.20250416.0 2025-04-01 nodejs_compat
 declare namespace Cloudflare {
 	interface Env {
+		YOUR_R2_BUCKET: R2Bucket;
+		FILE_METADATA_KV: KVNamespace;
+		SIGNALING_ROOM_DO: DurableObjectNamespace;
 	}
 }
 interface Env extends Cloudflare.Env {}
