@@ -10,5 +10,30 @@
   "upload_source_maps": true,
   "assets": {
     "not_found_handling": "single-page-application"
+  },
+  "r2_buckets": [
+    {
+      "binding": "YOUR_R2_BUCKET",
+      "bucket_name": "your-actual-bucket-name-prod",
+      "preview_bucket_name": "your-actual-bucket-name-preview"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "FILE_METADATA_KV",
+      "id": "your-kv-namespace-id-for-prod",
+      "preview_id": "your-kv-namespace-id-for-preview"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "SIGNALING_ROOM_DO", "class_name": "SignalingRoom" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_classes": ["SignalingRoom"] }
+  ],
+  "triggers": {
+    "crons": ["0 0 * * *"] 
   }
 }
